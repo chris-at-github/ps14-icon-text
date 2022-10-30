@@ -8,7 +8,7 @@ $EM_CONF[$_EXTKEY] = [
 	'author_email' => 'pschorr.christian@gmail.com',
 	'state' => 'beta',
 	'clearCacheOnLoad' => 0,
-	'version' => '1.0.2',
+	'version' => '1.0.3',
 	'constraints' => [
 		'depends' => [
 			'typo3' => '10.4.0-10.4.99',
@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = [
 	],
 	'autoload' => [
 		'psr-4' => [
-			'Ps14\\CeIconText\\' => 'Classes',
+			'Ps14\\Ps14IconText\\' => 'Classes',
 		],
 	],
 ];

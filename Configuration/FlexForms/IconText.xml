@@ -12,21 +12,21 @@
 				<el>
 					<settings.layout type="array">
 						<TCEforms>
-							<label>LLL:EXT:ce_icon_text/Resources/Private/Language/locallang_tca.xlf:tx_ce_icon_text.settings.layout</label>
+							<label>LLL:EXT:ps14_icon_text/Resources/Private/Language/locallang_tca.xlf:icon-text.settings.layout</label>
 							<config>
 								<type>select</type>
 								<renderType>selectSingle</renderType>
 								<itemsProcFunc>Ps\Xo\Service\TcaService->getItemsBySettingsIdentifier</itemsProcFunc>
 								<itemsProcConfig>
-									<identifier>modules.ce_icon_text.layouts</identifier>
-									<extension>xo</extension>
+									<identifier>layouts</identifier>
+									<extension>Ps14IconText</extension>
 								</itemsProcConfig>
 							</config>
 						</TCEforms>
 					</settings.layout>
 					<settings.align.inner type="array">
 						<TCEforms>
-							<label>LLL:EXT:ce_icon_text/Resources/Private/Language/locallang_tca.xlf:tx_ce_icon_text.settings.align.inner</label>
+							<label>LLL:EXT:ps14_icon_text/Resources/Private/Language/locallang_tca.xlf:icon-text.settings.align.inner</label>
 							<config>
 								<type>select</type>
 								<renderType>selectSingle</renderType>

@@ -1,12 +1,10 @@
 <?php
 defined('TYPO3_MODE') || die('Access denied.');
 
-call_user_func(
-	function() {
+call_user_func(function() {
 
-		// PageTs
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-			'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ce_icon_text/Configuration/TSConfig/Page.t3s">'
-		);
-	}
-);
+	// PageTs
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ps14_icon_text/Configuration/TSConfig/Page.t3s">'
+	);
+});

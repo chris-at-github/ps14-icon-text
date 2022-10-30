@@ -1,22 +1,16 @@
 mod.wizards.newContentElement.wizardItems {
 	common {
 		elements {
-			ce_icon_text {
+			ps14_icon_text {
 				iconIdentifier = content-textpic
-				title = LLL:EXT:ce_icon_text/Resources/Private/Language/locallang_tca.xlf:tx_ce_icon_text.title
-				description = LLL:EXT:ce_icon_text/Resources/Private/Language/locallang_tca.xlf:tx_ce_icon_text.description
+				title = LLL:EXT:ps14_icon_text/Resources/Private/Language/locallang_tca.xlf:icon-text.title
+				description = LLL:EXT:ps14_icon_text/Resources/Private/Language/locallang_tca.xlf:icon-text.description
 				tt_content_defValues {
-					CType = ce_icon_text
+					CType = ps14_icon_text
 				}
 			}
 		}
 
-		show := addToList(ce_icon_text)
+		show := addToList(ps14_icon_text)
 	}
 }
-
-[field('CType') === 'ce_icon_text']
-	TCAdefaults.tt_content {
-		space_before_class = small
-	}
-[END]

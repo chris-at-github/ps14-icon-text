@@ -7,12 +7,12 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Variablen
-$ce-icon-text--use-css: true !default;
-$ce-icon-text--layout-vertical: true !default;
-$ce-icon-text--layout-horizontal: true !default;
-$ce-icon-text--layout-inline: true !default;
+$ps14-icon-text--use-css: true !default;
+$ps14-icon-text--layout-vertical: true !default;
+$ps14-icon-text--layout-horizontal: true !default;
+$ps14-icon-text--layout-inline: true !default;
 
-@if($ce-icon-text--use-css) {
+@if($ps14-icon-text--use-css) {
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Icon Text Component
@@ -116,7 +116,7 @@ $ce-icon-text--layout-inline: true !default;
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Horizontale Darstellung
-	@if($ce-icon-text--layout-horizontal) {
+	@if($ps14-icon-text--layout-horizontal) {
 		.ce-icon-text--horizontal {
 			.icon-text {
 				display: flex;
@@ -131,7 +131,7 @@ $ce-icon-text--layout-inline: true !default;
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Inline Darstellung
-	@if($ce-icon-text--layout-inline) {
+	@if($ps14-icon-text--layout-inline) {
 		.ce-icon-text--inline {
 			.icon-text {
 				width: auto;
@@ -146,7 +146,7 @@ $ce-icon-text--layout-inline: true !default;
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Vertikale Darstellung
-	@if($ce-icon-text--layout-vertical) {
+	@if($ps14-icon-text--layout-vertical) {
 		.ce-icon-text--inline {
 			.icon-text--icon {
 				align-items: flex-end;
@@ -157,7 +157,7 @@ $ce-icon-text--layout-inline: true !default;
 	// -------------------------------------------------------------------------------------------------------------------
 	// >= 576px
 	@include media-breakpoint-up(sm) {
-		@if($ce-icon-text--layout-vertical) {
+		@if($ps14-icon-text--layout-vertical) {
 			.ce-icon-text--vertical {
 				.icon-text {
 					@include make-col(6);
@@ -175,7 +175,7 @@ $ce-icon-text--layout-inline: true !default;
 			}
 		}
 
-		@if($ce-icon-text--layout-vertical) {
+		@if($ps14-icon-text--layout-vertical) {
 			.ce-icon-text--vertical {
 				.icon-text {
 					@include make-col(4);
@@ -183,7 +183,7 @@ $ce-icon-text--layout-inline: true !default;
 			}
 		}
 
-		@if($ce-icon-text--layout-horizontal) {
+		@if($ps14-icon-text--layout-horizontal) {
 			.ce-icon-text--horizontal {
 				.icon-text {
 					@include make-col(6);
@@ -199,7 +199,7 @@ $ce-icon-text--layout-inline: true !default;
 	// -------------------------------------------------------------------------------------------------------------------
 	// >= 992px
 	@include media-breakpoint-up(lg) {
-		@if($ce-icon-text--layout-horizontal) {
+		@if($ps14-icon-text--layout-horizontal) {
 			.ce-icon-text--horizontal {
 				.icon-text--content {
 					padding: rem(0 30px 0 0);

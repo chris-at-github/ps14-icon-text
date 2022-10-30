@@ -1,20 +1,20 @@
 tt_content {
-	ce_icon_text =< lib.contentElement
-	ce_icon_text {
+	ps14_icon_text =< lib.contentElement
+	ps14_icon_text {
 		templateName = IconText.html
 		layoutRootPaths {
-			10 = EXT:ce_icon_text/Resources/Private/Layouts/
-			20 = EXT:xna/Resources/Private/Extensions/CeIconText/Layouts/
+			10 = EXT:ps14_icon_text/Resources/Private/Layouts/
+			20 = EXT:xna/Resources/Private/Extensions/Ps14IconText/Layouts/
 		}
 
 		templateRootPaths {
-			10 = EXT:ce_icon_text/Resources/Private/Templates/
-			20 = EXT:xna/Resources/Private/Extensions/CeIconText/Templates/
+			10 = EXT:ps14_icon_text/Resources/Private/Templates/
+			20 = EXT:xna/Resources/Private/Extensions/Ps14IconText/Templates/
 		}
 
 		partialRootPaths {
-			10 = EXT:ce_icon_text/Resources/Private/Partials/
-			20 = EXT:xna/Resources/Private/Extensions/CeIconText/Partials/
+			10 = EXT:ps14_icon_text/Resources/Private/Partials/
+			20 = EXT:xna/Resources/Private/Extensions/Ps14IconText/Partials/
 		}
 
 		dataProcessing {
@@ -26,7 +26,7 @@ tt_content {
 				where {
 					data = field:uid
 					intval = 1
-					wrap = tx_xo_content=|
+					wrap = foreign_uid = |
 				}
 				orderBy = sorting
 
@@ -45,7 +45,7 @@ tt_content {
 			  as = flexform
 			}
 
-			120 = Ps14\CeIconText\DataProcessing\ModuleProcessor
+			120 = Ps14\Ps14IconText\DataProcessing\ModuleProcessor
 			120 {
 				importCss {
 					10 = /assets/css/modules/icon-text.css
@@ -55,14 +55,12 @@ tt_content {
 	}
 }
 
-plugin.tx_xo.settings.modules {
-	ce_icon_text {
-		layouts {
-			vertical = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_align.vertical
-			horizontal = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_align.horizontal
-			inline = LLL:EXT:ce_icon_text/Resources/Private/Language/locallang_tca.xlf:tx_ce_icon_text.settings.layout.inline
-		}
+plugin.tx_ps14icontext.settings {
+	layouts {
+		vertical = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_align.vertical
+		horizontal = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_align.horizontal
+		inline = LLL:EXT:ps14_icon_text/Resources/Private/Language/locallang_tca.xlf:tx_ps14_icon_text.settings.layout.inline
 	}
 }
 
-module.tx_xo.settings.modules.ce_icon_text < plugin.tx_xo.settings.modules.ce_icon_text
+module.tx_ps14icontext.settings < plugin.tx_ps14icontext.settings

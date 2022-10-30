@@ -1,32 +1,32 @@
 {
-    "name": "ps14/ce-icon-text",
-    "type": "typo3-cms-extension",
-    "description": "",
-    "authors": [
-        {
-            "name": "Christian Pschorr",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "typo3/cms-core": "^10.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "Ps14\\CeIconText\\": "Classes"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Ps14\\CeIconText\\Tests\\": "Tests"
-        }
-    },
-    "replace": {
-        "typo3-ter/ce-icon-text": "self.version"
-    },
-    "extra": {
-        "typo3/cms": {
-            "extension-key": "ce_icon_text"
-        }
-    }
+	"name": "ps14/ps14-icon-text",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"authors": [
+		{
+			"name": "Christian Pschorr",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "^10.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"Ps14\\Ps14IconText\\": "Classes"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Ps14\\Ps14IconText\\Tests\\": "Tests"
+		}
+	},
+	"replace": {
+		"typo3-ter/ps14-icon-text": "self.version"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "ps14_icon_text"
+		}
+	}
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ps14\CeIconText\DataProcessing;
+namespace Ps14\Ps14IconText\DataProcessing;
 
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;

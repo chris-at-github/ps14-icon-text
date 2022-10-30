@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="ce_icon_text" target-language="de">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="ps14_icon_text" target-language="de">
 		<header/>
 		<body>
-			<trans-unit id="tx_ce_icon_text.title">
+			<trans-unit id="icon-text.title">
 				<target>Icon Text</target>
 			</trans-unit>
-			<trans-unit id="tx_ce_icon_text.description">
+			<trans-unit id="icon-text.description">
 				<target>Icon text elements</target>
+			</trans-unit>
+
+			<trans-unit id="icon-text.settings.layout">
+				<target>Layout (Ausrichtung Text und Icon untereinander)</target>
+			</trans-unit>
+			<trans-unit id="icon-text.settings.layout.inline">
+				<target>Inline</target>
+			</trans-unit>
+			<trans-unit id="icon-text.settings.align.inner">
+				<target>Ausrichtung Text und Icon innerhalb des Elements</target>
 			</trans-unit>
 
 			<trans-unit id="tx_xo_domain_model_elements.record_type">
@@ -16,17 +26,6 @@
 			<trans-unit id="tx_xo_domain_model_elements.media">
 				<target>Icon</target>
 			</trans-unit>
-
-			<trans-unit id="tx_ce_icon_text.settings.layout">
-				<target>Layout (Ausrichtung Text und Icon untereinander)</target>
-			</trans-unit>
-			<trans-unit id="tx_ce_icon_text.settings.layout.inline">
-				<target>Inline</target>
-			</trans-unit>
-			<trans-unit id="tx_ce_icon_text.settings.align.inner">
-				<target>Ausrichtung Text und Icon innerhalb des Elements</target>
-			</trans-unit>
-
 		</body>
 	</file>
 </xliff>
