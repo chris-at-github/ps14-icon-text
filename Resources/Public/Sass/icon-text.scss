@@ -8,11 +8,16 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Variablen
 $ps14-icon-text--use-css: true !default;
-$ps14-icon-text--layout-vertical: true !default;
-$ps14-icon-text--layout-horizontal: true !default;
-$ps14-icon-text--layout-inline: true !default;
+$ps14-icon-text--layout-vertical: false !default;
+$ps14-icon-text--layout-horizontal: false !default;
+$ps14-icon-text--layout-inline: false !default;
 
 @if($ps14-icon-text--use-css) {
+
+	:root {
+		--icon-text__size: #{rem(40px)};
+		--icon-text__icon-color: currentColor;
+	}
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Icon Text Component
@@ -20,8 +25,8 @@ $ps14-icon-text--layout-inline: true !default;
 		.icon-text--icon-container {
 			& {
 				position: relative;
-				width: rem(64px);
-				height: rem(64px);
+				width: var(--icon-text__size);
+				height: var(--icon-text__size);
 			}
 
 			& + .icon-text--title {
@@ -31,9 +36,9 @@ $ps14-icon-text--layout-inline: true !default;
 
 		.icon-text--icon {
 			display: flex;
-			width: rem(64px);
-			height: rem(64px);
-			fill: $font-color-base;
+			width: var(--icon-text__size);
+			height: var(--icon-text__size);
+			fill: var(--icon-text__icon-color);
 		}
 
 		.icon-text--title {
@@ -41,8 +46,8 @@ $ps14-icon-text--layout-inline: true !default;
 				margin: rem(3px 0 0 0);
 				line-height: 1.4;
 				font-size: rem(20px);
-				font-weight: $font-weight-bold;
-				color: $font-color-base;
+				font-weight: var(--font__weight-bold);
+				color: var(--font__color-default);
 			}
 
 			h1, h2, h3, h4, h5, h6 {
@@ -55,7 +60,7 @@ $ps14-icon-text--layout-inline: true !default;
 				}
 
 				&:hover, .focusable &:focus {
-					color: $theme-color-primary;
+					color: var(--link__color-active);
 				}
 			}
 		}
@@ -73,12 +78,12 @@ $ps14-icon-text--layout-inline: true !default;
 		&[data-uri-target]:hover {
 			&, a, h1, h2, h3, h4, h5, h6 {
 				cursor: pointer;
-				color: $link-color-hover;
+				color: var(--link__color-active);
 				text-decoration: none;
 			}
 
 			svg {
-				fill: $link-color-hover;
+				fill: var(--link__color-active);
 			}
 		}
 	}
@@ -86,17 +91,14 @@ $ps14-icon-text--layout-inline: true !default;
 	// -------------------------------------------------------------------------------------------------------------------
 	// Icon Text Modul
 	.ce-icon-text {
-		.ce-header + %header-sibling {
-			margin-top: $spacing-default;
-		}
-
 		.icon-text--container {
-			@include make-row();
+			display: flex;
 		}
 
 		.icon-text {
-			@include make-col-ready();
-			margin: $spacing-default 0 0 0;
+			display: flex;
+			//@include make-col-ready();
+			//margin: $spacing-default 0 0 0;
 		}
 	}
 
@@ -160,7 +162,7 @@ $ps14-icon-text--layout-inline: true !default;
 		@if($ps14-icon-text--layout-vertical) {
 			.ce-icon-text--vertical {
 				.icon-text {
-					@include make-col(6);
+					// @include make-col(6);
 				}
 			}
 		}
@@ -178,7 +180,7 @@ $ps14-icon-text--layout-inline: true !default;
 		@if($ps14-icon-text--layout-vertical) {
 			.ce-icon-text--vertical {
 				.icon-text {
-					@include make-col(4);
+					// @include make-col(4);
 				}
 			}
 		}
@@ -186,7 +188,7 @@ $ps14-icon-text--layout-inline: true !default;
 		@if($ps14-icon-text--layout-horizontal) {
 			.ce-icon-text--horizontal {
 				.icon-text {
-					@include make-col(6);
+					// @include make-col(6);
 				}
 
 				.icon-text--content {
@@ -208,19 +210,8 @@ $ps14-icon-text--layout-inline: true !default;
 		}
 
 	}
-
-	// -------------------------------------------------------------------------------------------------------------------
-	// IE10 / 11
-	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-		.icon-text {
-			.icon-text--icon svg {
-				width: rem(64px);
-				height: rem(64px);
-			}
-		}
-	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 // XNA Override
-@import '../../../../xna/Resources/Public/Sass/xna/modules/icon-text';
+@import '../../../../xna/Resources/Public/Sass/modules/icon-text';
