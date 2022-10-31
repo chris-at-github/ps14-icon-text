@@ -17,6 +17,7 @@ $ps14-icon-text--layout-inline: false !default;
 	:root {
 		--icon-text__size: #{rem(40px)};
 		--icon-text__icon-color: currentColor;
+		--icon-text__header-font-size: #{rem(20px)};
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
@@ -45,7 +46,7 @@ $ps14-icon-text--layout-inline: false !default;
 			&, a, h1, h2, h3, h4, h5, h6 {
 				margin: rem(3px 0 0 0);
 				line-height: 1.4;
-				font-size: rem(20px);
+				font-size: var(--icon-text__header-font-size);
 				font-weight: var(--font__weight-bold);
 				color: var(--font__color-default);
 			}
@@ -92,13 +93,11 @@ $ps14-icon-text--layout-inline: false !default;
 	// Icon Text Modul
 	.ce-icon-text {
 		.icon-text--container {
-			display: flex;
+			margin-top: var(--html-element__spacing-default);
 		}
 
 		.icon-text {
 			display: flex;
-			//@include make-col-ready();
-			//margin: $spacing-default 0 0 0;
 		}
 	}
 
