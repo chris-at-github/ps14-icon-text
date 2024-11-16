@@ -26,17 +26,8 @@
 							<f:render partial="Content/Bodytext" arguments="{bodytext: element.data.description}" />
 						</f:if>
 
-						<f:if condition="{element.media}">
-							<ul>
-								<f:for each="{element.media}" as="image">
-									<li>
-										<f:render partial="Media/Main" section="Main" arguments="{
-											file: image,
-											settings: '{fo:settings.get(extension: \'Ps14IconText\', path: \'images.element\')}'
-										}" />
-									</li>
-								</f:for>
-							</ul>
+						<f:if condition="{element.media.0}">
+							<fo:svg.inline source="{element.media.0.publicUrl}" />
 						</f:if>
 					</li>
 				</f:for>
