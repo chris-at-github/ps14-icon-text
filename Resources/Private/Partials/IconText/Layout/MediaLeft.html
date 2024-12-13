@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:section name="Main">
+	<div class="container__body">
+		<f:render partial="Header/All" arguments="{_all}" />
+		<f:render section="Bodytext" arguments="{_all}" />
+		<f:render partial="IconText/Listing/Main" section="Main" arguments="{_all}" />
+	</div>
+</f:section>
+
+<f:section name="Bodytext">
+	<f:if condition="{data.bodytext}">
+		<f:render partial="Content/Bodytext" arguments="{bodytext: data.bodytext}" />
+	</f:if>
+</f:section>
+</html>
