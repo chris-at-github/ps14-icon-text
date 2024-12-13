@@ -1,0 +1,29 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:fo="http://typo3.org/ns/Ps14/Foundation/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<div class="icon-text--container">
+			<f:for each="{elements}" as="element">
+
+
+				<f:variable name="iconCssClass">
+					<f:if condition="{element.media.0}">
+						icon-text--{element.media.0.name -> fo:format.sanitize()}
+					</f:if>
+				</f:variable>
+
+				<f:if condition="{element.data.link}">
+					<f:then>
+						<div data-uri-target="{f:uri.typolink(parameter: element.data.link)}" class="icon-text {iconCssClass -> fo:format.trim()}">
+							<f:render partial="IconText/Item/Main" section="Main" arguments="{_all}" />
+						</div>
+					</f:then>
+					<f:else>
+						<div class="icon-text {iconCssClass -> fo:format.trim()}">
+							<f:render partial="IconText/Item/Main" section="Main" arguments="{_all}" />
+						</div>
+					</f:else>
+				</f:if>
+
+			</f:for>
+		</div>
+	</f:section>
+</div>

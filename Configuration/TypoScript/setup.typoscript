@@ -21,17 +21,17 @@ tt_content {
 			40 = EXT:ps14_site/Resources/Private/Partials/
 		}
 
-#		dataProcessing {
-#			200 = Ps14\IconText\DataProcessing\ModuleProcessor
-#			200 {
-#				importCss {
-#					10 = /assets/css/modules/icon-text.css
-#				}
-#
+		dataProcessing {
+			200 = Ps14\Foundation\DataProcessing\ModuleProcessor
+			200 {
+				importCss {
+					10 = /assets/css/modules/icon-text.css
+				}
+
 #				importJs {
 #					10 = /assets/js/modules/icon-text.js
 #				}
-#			}
-#		}
+			}
+		}
 	}
 }
